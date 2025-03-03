@@ -1,0 +1,61 @@
+# 🔹 Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# 🔹 Entornos virtuales
+venv/
+env/
+.venv/
+.virtualenvs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# 🔹 Dependencias
+*.egg-info/
+*.egg
+dist/
+build/
+
+# 🔹 Configuración y secretos
+.env
+.env.local
+.env.*.local
+secrets.json
+
+# 🔹 Archivos de logs
+*.log
+logs/
+
+# 🔹 Archivos de FastAPI y Uvicorn
+instance/
+*.sqlite3
+*.db
+*.pid
+
+# 🔹 Caché y compilación
+*.cache
+*.pytest_cache/
+*.mypy_cache/
+.coverage
+htmlcov/
+
+# 🔹 Configuración de Docker
+docker-compose.yml
+.Dockerfile.swp
+.dockerignore
+
+# 🔹 Archivos de IDEs y editores
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+
+# 🔹 Archivos de Jupyter (si usas notebooks)
+.ipynb_checkpoints/
+
+# 🔹 Otros
+.DS_Store
+Thumbs.db
