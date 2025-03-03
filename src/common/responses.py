@@ -23,5 +23,10 @@ class SuccessResponse(BaseResponse):
 
 
 class ErrorResponse(BaseResponse):
-    def __init__(self, message: str, status_code: int = EnumHttpStatusCode.HTTP_400.value):
+    def __init__(self, message: str, status_code: int = EnumHttpStatusCode.HTTP_400.value, details: Optional[Any] = None):
         super().__init__(message=message, status_code=status_code)
+        self.details = details
+
+    def to_json(self) -> JSONResponse:
+        return JSONResponse(content={"message": self.message, "details": self.details},
+                            status_code=self.status_code)

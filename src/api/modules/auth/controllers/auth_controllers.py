@@ -6,12 +6,9 @@ class AuthController():
     def __init__(self, auth_service: AuthServices):
         self.auth_service = auth_service
 
-    async def get_users(self):
+    async def login(self):
         try:
-            response = {
-                "message": "Hello, World",
-                "data": []
-            }
+            response = self.auth_service.login()
             return response
         except Exception as e:
             return str(e)
